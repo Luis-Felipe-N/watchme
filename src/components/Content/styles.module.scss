@@ -1,0 +1,32 @@
+.contentContainer {
+    background-color: var(--background);
+    > div {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+
+        padding: 2rem 5%;
+        transition: .2s;
+
+        animation: initAnimation .2s;
+
+        h1 {
+            color: var(--gray);
+
+            span {
+                color: var(--white);
+            }
+        }
+    }
+}
+
+@keyframes initAnimation {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

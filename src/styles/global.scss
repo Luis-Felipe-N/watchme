@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --background: #1F2229;
+    --background2: #2E303C;
+    --background-button: #373945;
+    --background-button2: #4B4D59;
+    --yellow: #FAE800;
+    --gray: #BEC2C6;
+    --white: #FBFBFB;
+  }
+
+.main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}

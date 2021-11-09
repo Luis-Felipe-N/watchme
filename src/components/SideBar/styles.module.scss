@@ -1,0 +1,27 @@
+.sideBarContainer {
+    background-color: var(--background2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    
+    h1 {
+        font-size: 2.5rem;
+        color: var(--yellow);
+
+        span {
+            color: var(--white);
+        }
+    }
+
+    &__btns {
+        width: 100%;
+        margin-top: 3rem;
+
+        display: flex;
+        gap: .5rem;
+        flex-direction: column;
+    }
+}
