@@ -1,12 +1,16 @@
 .sideBarContainer {
+    transition: .2s;
+    box-sizing: border-box;
     position: sticky;
     top: 0;
+    overflow: hidden;
     background-color: var(--background2);
     display: flex;
     align-items: center;
     flex-direction: column;
 
     padding: 2rem 1rem;
+    width: 300px ;
     height: 100vh;
     
     h1 {
@@ -25,5 +29,46 @@
         display: flex;
         gap: .5rem;
         flex-direction: column;
+    }
+}
+.btnMenu {
+    width: 32px;
+    height: 32px;
+    z-index: 4;
+    position: absolute;
+    left: 2rem;
+    top: .7rem;
+    display: none;
+
+    font-size: 2rem;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--yellow);
+    border-radius: 100%;
+
+    background-color: transparent;
+    transition: .2s;
+    
+    &:hover {
+        background-color: var(--background-button2);
+        box-shadow: 0 0 0 4px var(--background-button2);
+    }
+}
+
+@media (max-width: 870px) {
+    .sideBarContainer {
+        width: 0;
+        padding: 3rem 0;
+    }
+
+    .sideBarContainer.active {
+        width: 300px;
+        padding: 3rem 1rem;
+    }
+
+    .btnMenu {
+        display: flex;
     }
 }

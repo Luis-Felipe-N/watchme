@@ -1,11 +1,13 @@
 .contentContainer {
     background-color: var(--background);
+    width: 100%;
+
     > div {
         max-width: 900px;
         margin: 0 auto;
         width: 100%;
 
-        padding: 2rem 5%;
+        padding: 3rem 5%;
         transition: .2s;
 
         animation: initAnimation .2s;

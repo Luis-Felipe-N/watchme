@@ -3,6 +3,7 @@ import { api } from '../../api/api'
 import { genreSelectedContext } from '../../context/genreSelectedContext'
 import { Button } from '../Button'
 import styles from './styles.module.scss'
+import { BiMenu } from 'react-icons/bi'
 
 interface IGenres {
     title: string;
@@ -13,6 +14,7 @@ interface IGenres {
 export function SideBar() {
     const [ genres, setGenres ] = useState<IGenres[]>([])
     const [ genre, setGenre ] = useState(1)
+    const [ openMenu, setOpenMenu ] = useState(false)
 
     const { setGenreSelected } = useContext(genreSelectedContext)
 
@@ -29,7 +31,8 @@ export function SideBar() {
     },[])
 
     return(
-        <aside className={styles.sideBarContainer}>
+        <>
+        <aside className={openMenu ? `${styles.sideBarContainer} ${styles.active}` : styles.sideBarContainer}>
             <h1>Watch<span>Me</span></h1>
 
             <div className={styles.sideBarContainer__btns}>
@@ -46,5 +49,8 @@ export function SideBar() {
                 })}
             </div>
         </aside>
+
+        <button onClick={() => setOpenMenu(!openMenu)} className={styles.btnMenu}><BiMenu /></button>
+        </>
     )
 }

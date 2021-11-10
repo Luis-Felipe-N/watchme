@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    background-color: var(--background);
 }
 
 :root {
@@ -19,11 +20,20 @@ body {
   }
 
 .main {
-    display: grid;
-    grid-template-columns: 300px 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 button {
     border: 0;
     cursor: pointer;
 }
+
+// @media (max-width: 870px) {
+//     .main {
+//         transition: .2s;
+//         background-color: red;
+//         grid-template-columns: 0 1fr !important;
+//     }
+// }
