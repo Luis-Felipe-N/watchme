@@ -1,5 +1,4 @@
-import React, { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
-import { api } from '../api/api';
+import { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
 
 export const genreSelectedContext = createContext({} as IGenreSelectedContext)
 
@@ -10,15 +9,15 @@ interface IGenreSelected {
 }
 
 interface IGenreSelectedContext {
-    genreSelected: IGenreSelected,
-    setGenreSelected: Dispatch<SetStateAction<IGenreSelected>>
+    genreSelected: IGenreSelected | undefined;
+    setGenreSelected: Dispatch<SetStateAction<IGenreSelected | undefined>>
 }
 
 interface genreSelectedContextProviderProps {
     children: ReactNode
 }
 
-export function genreSelectedContextProvider({children}: genreSelectedContextProviderProps) {
+export function GenreSelectedContextProvider({children}: genreSelectedContextProviderProps) {
     const [ genreSelected, setGenreSelected ] = useState<IGenreSelected>()
 
     return (

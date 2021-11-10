@@ -1,18 +1,17 @@
 import './styles/global.scss'
 import { SideBar } from './components/SideBar';
 import { Content } from './components/Content';
-import { useState } from 'react';
-import { genreSelectedContextProvider } from './context/genreSelectedContext';
+import { GenreSelectedContextProvider } from './context/genreSelectedContext';
 
 function App() {
 
   return (
-      <genreSelectedContextProvider>
+      <GenreSelectedContextProvider>
         <div className="main">
             <SideBar  />
             <Content />
         </div>
-      </genreSelectedContextProvider>
+      </GenreSelectedContextProvider>
   );
 }
 

@@ -10,11 +10,6 @@ interface IGenres {
     name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
 }
 
-interface ISidebar {
-    setGenre: (name: number)=>void;
-    genre: number;
-}
-
 export function SideBar() {
     const [ genres, setGenres ] = useState<IGenres[]>([])
     const [ genre, setGenre ] = useState(1)
@@ -27,7 +22,7 @@ export function SideBar() {
 
     useEffect(() => {
         api.get(`/genres/${ genre }`).then( response => setGenreSelected(response.data))
-    },[genre])
+    },[genre, setGenreSelected])
 
     useEffect(() => {
         api.get('/genres').then( response => setGenres(response.data))
@@ -41,10 +36,11 @@ export function SideBar() {
                 {genres.map( button => {
                     return (
                         <Button 
+                            key={button.id}
                             onClick={() => handleSelectGenres(button.id)}
                             title={button.title} 
                             iconName={button.name} 
-                            selected={genre == button.id}
+                            selected={genre === button.id}
                         />
                     )
                 })}

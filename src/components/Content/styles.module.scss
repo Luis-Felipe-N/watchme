@@ -1,7 +1,7 @@
 .contentContainer {
     background-color: var(--background);
     > div {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
         width: 100%;
 
@@ -17,7 +17,18 @@
                 color: var(--white);
             }
         }
+
+        .containerCards {
+            margin: 3rem 0;
+
+            display: flex;
+            // justify-content: ce;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
     }
+
+
 }
 
 @keyframes initAnimation {
