@@ -35,7 +35,7 @@ export function Content() {
                 </header>
                 <div className={styles.containerCards}>
                     {
-                        movies && movies.map( movie => <MovieCard poster={movie.Poster} title={movie.Title} duration={movie.Runtime} ratings={movie.Ratings[0].Value}/>)
+                        movies && movies.map( movie => <MovieCard key={movie.imdbID} poster={movie.Poster} title={movie.Title} duration={movie.Runtime} ratings={movie.Ratings[0].Value}/>)
                     }
                 </div>
             </div>

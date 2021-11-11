@@ -34,7 +34,7 @@
 .btnMenu {
     width: 32px;
     height: 32px;
-    z-index: 4;
+    z-index: 5;
     position: absolute;
     left: 2rem;
     top: .7rem;
@@ -71,4 +71,28 @@
     .btnMenu {
         display: flex;
     }
+}
+
+@media (max-width: 500px) {
+    .sideBarContainer {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        right: 0;
+        bottom: 0;
+        // width: 0;
+        padding: 3rem 0;
+        z-index: 4;
+    }
+
+    .sideBarContainer.active {
+        left: 0;
+        // width: 100vw;
+        padding: 3rem 1rem;
+        box-sizing: border-box;
+    }
+
+    // .btnMenu {
+    //     display: flex;
+    // }
 }

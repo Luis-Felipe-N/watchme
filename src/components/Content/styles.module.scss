@@ -43,3 +43,9 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 800px) {
+    .contentContainer .containerCards {
+        justify-content: center;
+    }
+}
